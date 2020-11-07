@@ -1,0 +1,47 @@
+.widgetMetric {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 105px;
+  width: 40%;
+}
+
+.metricContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid #eee;
+}
+
+.arrowMetric {
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+  font-size: 25px;
+  text-shadow: -1px 0 #ddd, 0 1px #ddd, 1px 0 #ddd;
+}
+
+.textMetric {
+  margin-bottom: 20px;
+}
+
+.shortButton {
+  position: relative;
+}
+
+#shortLogo {
+  position: absolute;
+  bottom: 0;
+  padding: 6px 6px 0 6px;
+  top: 140px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}

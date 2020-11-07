@@ -1,0 +1,67 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "import",
+    "import-helpers",
+    "prettier"
+  ],
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "__DEV__": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "camelcase": "off",
+    "import/no-named-as-default": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "consistent-return": "off",
+    "prettier/prettier": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "no-console": "off",
+    "no-use-before-define": [
+      "error",
+      {
+        "variables": false
+      }
+    ],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".native.js"]
+      }
+    }
+  }
+}
