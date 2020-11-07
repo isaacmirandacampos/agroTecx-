@@ -30,12 +30,8 @@ const useStyles = makeStyles(theme => ({
   selectField: {
     marginTop: theme.spacing(1),
   },
-  boxPhone: {
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  phoneState: {
-    marginTop: theme.spacing(2),
+  Top: {
+    padding: theme.spacing(2),
     marginRight: theme.spacing(2),
   },
   centerButton: {
@@ -84,20 +80,135 @@ const FormSignUp = () => {
       value: '',
     },
     {
-      item: 'Agropecuária',
-      value: 'Agropecuaria',
+      item: 'Acre',
+      value: 'Acre',
     },
     {
-      item: 'supermercado',
+      item: 'Alagoas',
+      value: 'Alagoas',
+    },
+    {
+      item: 'Amapá',
+      value: 'Amapá',
+    },
+    {
+      item: 'Amazonas',
+      value: 'Amazonas',
+    },
+    {
+      item: 'Bahia',
+      value: 'Bahia',
+    },
+    {
+      item: 'Ceará',
+      value: 'Ceara',
+    },
+    {
+      item: 'Distrito Federal',
+      value: 'Distrito Federal',
+    },
+    {
+      item: 'Espírito Santo',
+      value: 'Espírito Santo',
+    },
+    {
+      item: 'Goiás',
+      value: 'Goiás',
+    },
+    {
+      item: 'Maranhão',
+      value: 'Maranhão',
+    },
+    {
+      item: 'Mato Grosso',
+      value: 'Mato Grosso',
+    },
+    {
+      item: 'Mato Grosso do Sul',
+      value: 'Mato Grosso do Sul',
+    },
+    {
+      item: 'Minas Gerais',
+      value: 'Minas Gerais',
+    },
+    {
+      item: 'Pará',
+      value: 'Pará',
+    },
+    {
+      item: 'Paraíba',
+      value: 'Paraíba',
+    },
+    {
+      item: 'Paraná',
+      value: 'Paraná',
+    },
+    {
+      item: 'Pernambuco',
+      value: 'Pernambuco',
+    },
+    {
+      item: 'Piauí',
+      value: 'Piauí',
+    },
+    {
+      item: 'Rio de Janeiro',
+      value: 'Rio de Janeiro',
+    },
+    {
+      item: 'Rio Grande do Norte',
+      value: 'Rio Grande do Norte',
+    },
+    {
+      item: 'Rio Grande do Sul',
+      value: 'Rio Grande do Sul',
+    },
+    {
+      item: 'Rondônia',
+      value: 'Rondônia',
+    },
+    {
+      item: 'Roraima',
+      value: 'Roraima',
+    },
+    {
+      item: 'Santa Catarina',
+      value: 'Santa Catarina',
+    },
+    {
+      item: 'São Paulo',
+      value: 'São Paulo',
+    },
+    {
+      item: 'Sergipe',
+      value: 'Sergipe',
+    },
+    {
+      item: 'Tocantins',
+      value: 'Tocantins',
+    },
+  ];
+
+  const segments = [
+    {
+      item: 'Selecione',
+      value: '',
+    },
+    {
+      item: 'Agropecuária',
+      value: 'Agropecuária',
+    },
+    {
+      item: 'Supermercado',
       value: 'Supermercado',
+    },
+    {
+      item: 'Atacadista',
+      value: 'Atacadista',
     },
     {
       item: 'Varejo',
       value: 'Varejo',
-    },
-    {
-      item: 'Atacado',
-      value: 'Atacado',
     },
   ];
 
@@ -126,21 +237,45 @@ const FormSignUp = () => {
         onChange={handleChangeValues('email')}
         fullWidth
       />
-      <FormControl variant="outlined" fullWidth style={{ marginTop: 15 }}>
-        <InputLabel id="segment">Segmento</InputLabel>
-        <Select
-          labelId="segment"
-          label="Segmento"
-          id="demo-simple-select"
-          value={values.segment}
-          variant="outlined"
-          onChange={handleChangeValues('segment')}
-        >
-          {options.map(opt => (
-            <MenuItem value={opt.value}>{opt.item}</MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <Box
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+        }}
+      >
+        <FormControl variant="outlined" fullWidth style={{ marginTop: 15 }}>
+          <InputLabel id="state">Estado</InputLabel>
+          <Select
+            labelId="state"
+            label="Estado"
+            id="demo-simple-select"
+            value={values.segment}
+            style={{ marginRight: 20 }}
+            variant="outlined"
+            onChange={handleChangeValues('uf')}
+          >
+            {options.map(opt => (
+              <MenuItem value={opt.value}>{opt.item}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+        <FormControl variant="outlined" fullWidth style={{ marginTop: 15 }}>
+          <InputLabel id="segment">Segmento</InputLabel>
+          <Select
+            labelId="segment"
+            label="Segmento"
+            id="demo-simple-select"
+            value={values.segment}
+            variant="outlined"
+            onChange={handleChangeValues('segment')}
+          >
+            {segments.map(opt => (
+              <MenuItem value={opt.value}>{opt.item}</MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
 
       <FormControl
         fullWidth
